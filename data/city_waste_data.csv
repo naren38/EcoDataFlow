@@ -1,0 +1,16 @@
+City,Date,Waste_Collected_Tons,Recycled_Tons
+Delhi,2024-01-01,560,210
+Delhi,2024-02-01,580,225
+Delhi,2024-03-01,600,240
+Mumbai,2024-01-01,520,190
+Mumbai,2024-02-01,545,200
+Mumbai,2024-03-01,565,210
+Bengaluru,2024-01-01,490,180
+Bengaluru,2024-02-01,510,195
+Bengaluru,2024-03-01,525,205
+Chennai,2024-01-01,470,175
+Chennai,2024-02-01,485,180
+Chennai,2024-03-01,495,190
+Hyderabad,2024-01-01,450,165
+Hyderabad,2024-02-01,470,170
+Hyderabad,2024-03-01,485,180
