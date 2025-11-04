@@ -12,12 +12,12 @@ import os
 # Ensure output folder exists
 os.makedirs('../outputs', exist_ok=True)
 
-# 1️⃣ Read data from database
+# 1️ Read data from database
 conn = sqlite3.connect('../database/waste_data.db')
 df = pd.read_sql_query("SELECT * FROM waste_records", conn)
 conn.close()
 
-# 2️⃣ Prepare data
+# 2️ Prepare data
 df['Date'] = pd.to_datetime(df['Date'])
 df['Timestamp'] = df['Date'].map(pd.Timestamp.toordinal)
 
@@ -49,7 +49,7 @@ for city in df['City'].unique():
 pred_df = pd.concat(future_predictions)
 pred_df.to_csv('../outputs/future_predictions.csv', index=False)
 
-# 3️⃣ Visualization
+# 3️ Visualization
 plt.figure(figsize=(10,6))
 for city in pred_df['City'].unique():
     city_data = pred_df[pred_df['City'] == city]
@@ -63,4 +63,4 @@ plt.tight_layout()
 plt.savefig('../outputs/future_forecast.png')
 plt.close()
 
-print("🤖 Future prediction completed – forecast chart & CSV saved in /outputs folder.")
+print(" Future prediction completed – forecast chart & CSV saved in /outputs folder.")
